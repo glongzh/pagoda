@@ -5,7 +5,7 @@ services:
 
 script:
 - docker build -t glongzh/golang:alpine-gcc -f golang-gcc/Dockerfile golang-gcc
-- docker run -v $(pwd):/go/src/github.com/glongzh/pagoda -w /go/src/github.com/glongzh/pagoda glongzh/golang:alpine-gcc go build
+- docker run -v $(pwd):/go/src/github.com/wise2c-devops/pagoda -w /go/src/github.com/wise2c-devops/pagoda glongzh/golang:alpine-gcc go build
 - docker build -t glongzh/pagoda:$TRAVIS_BRANCH .
 
 deploy:
